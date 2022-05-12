@@ -1,8 +1,34 @@
 $(document).ready(function () {
+
+    // Check wether the user is already logged in or not
+    checkSession();
+
     $("#btn_login").click(function () {
         loginJquery();
     });
 });
+
+async function checkSession(){
+    let token = localStorage.getItem('token');
+    $.ajax({
+        url: 'https://api.fikrihkl.xyz/api/secret-route',
+        type: 'GET',
+        dataType: 'json',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'appplication/json'
+        },
+        contentType: 'application/json; charset=utf-8',
+        success: function (result) {
+            if(result.status === true){
+                window.location.replace("order_list.html");
+            }
+        },
+        error: function (error) {
+            
+        }
+    });
+}
 
 async function loginJquery(){
     let etEmail = $("#et_email");
@@ -24,6 +50,7 @@ async function loginJquery(){
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
         console.log(response);
+        localStorage.setItem('token', response.data.token)
         window.location.replace("order_list.html");
     });
 
