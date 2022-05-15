@@ -1,21 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-     
-     <link rel="stylesheet" href="css/header.css">
- 
-     <!-- JQuery -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-    <script src="order_list.js"></script>
-    <title>Order List</title>
+    <title>List Recipe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="list_recipe.js"></script>
+    <link rel="stylesheet" href="css/header.css">
 </head>
-<body>
+
+<body class="bg-white" style="height: 100%">
     <!-- HEADER -->
     <div class="p-2 shadow-sm sticky-top bg-light">
         <div class="container d-flex justify-content-between align-items-center">
@@ -31,15 +28,16 @@
         </div>
     </div>
     <!-- HEADER -->
+    <div class="container">
+        <h1 class="text-center pt-3 pb-3">Popular Recipe s</h1>
+        <div class="container pb-4">
+            <div id="list-recipe" class="row row-cols-1 row-cols-md-3 justify-content-center mt-3 gap-md-2">
+                
+                
+            </div>
+        </div>
+    </div>
 
-
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    
     <!-- FOOTER -->
     <div style="margin-top: 50vh;">
         &nbsp;
@@ -89,4 +87,5 @@
     </div>
     <!-- FOOTER -->
 </body>
+
 </html>
