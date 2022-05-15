@@ -9,17 +9,24 @@ async function proccessData(json) {
     let item = [];
     for (let index = 0; index < listRecipe.length; index++) {
         let element = `
-        <div class="col-4 card">
-        <div class="card-body">
-            <img src="${listRecipe[index].img_url}" class="img-fluid rounded-3" width="auto">
-            <h3 class="card-title text-center pt-2">${listRecipe[index].name}</h3>
-            <div class="fw-bold">Time Cooking: ${listRecipe[index].approx_time_cook}</div>
-            <div class="fw-bold">Recipe Order: ${listRecipe[index].recipe_order_count}</div>
-            <div class="text-center">
-                <button class="btn btn-primary mt-3">Get Details</button>
+        <div class="col shadow-sm p-2 rounded-3 my-2">
+            <img style="object-fit:cover; height:220px; width:100%;" src="${listRecipe[index].img_url}" class="img-fluid rounded-3" width="auto">
+            <h3 class="fs-4 text-center pt-2">${listRecipe[index].name}</h3>
+            <div class="d-flex">
+                <img width="20px" src="img/ic_time.svg"/>
+                <div class="mx-2">${listRecipe[index].approx_time_cook}</div>
+            </div>
+            <div class="d-flex">
+                <img width="20px" src="img/ic_cooking.svg"/>
+                <div class="mx-2">${listRecipe[index].recipe_order_count} ordered</div>
+            </div>
+            <div class="text-end">
+                <button class="btn btn-outlined-primary rounded-3 mt-3 align-items-center">
+                    
+                    <img width="35px" src="img/ic_arrow-right.svg"/>
+                </button>
             </div>
         </div>
-    </div>
     `;
         item.push(element);
     }
