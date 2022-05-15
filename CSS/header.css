@@ -1,0 +1,11 @@
+@media screen and (min-width: 480px){
+    .header-menu img{
+        display: none;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 480px){
+    .header-menu p{
+        display: none;
+    }
+}
