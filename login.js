@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
     // Check wether the user is already logged in or not
-    checkSession();
+    
+   // checkSession();
 
     $("#btn_login").click(function () {
         loginJquery();
@@ -10,6 +11,7 @@ $(document).ready(function () {
 
 async function checkSession(){
     let token = localStorage.getItem('token');
+    console.log('S1');
     $.ajax({
         url: 'https://api.fikrihkl.xyz/api/secret-route',
         type: 'GET',
@@ -20,12 +22,13 @@ async function checkSession(){
         },
         contentType: 'application/json; charset=utf-8',
         success: function (result) {
+            console.log(result);
             if(result.status === true){
                 window.location.replace("order_list.html");
             }
         },
         error: function (error) {
-            
+            console.log(error);
         }
     });
 }
