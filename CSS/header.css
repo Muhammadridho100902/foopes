@@ -1,11 +1,22 @@
-@media screen and (min-width: 480px){
-    .header-menu img{
+@media screen and (min-width: 480px) {
+    .header-menu img {
         display: none;
         align-items: center;
     }
 }
-@media screen and (max-width: 480px){
-    .header-menu p{
+
+@media screen and (max-width: 480px) {
+    .header-menu p {
         display: none;
     }
+}
+
+.container-header {
+    height: 95vh;
+    min-height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/2673353/pexels-photo-2673353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: azure;
 }
