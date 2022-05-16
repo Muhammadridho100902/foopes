@@ -20,3 +20,50 @@
     background-repeat: no-repeat;
     color: azure;
 }
+
+.header-order {
+    height: 95vh;
+    min-height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/5637682/pexels-photo-5637682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: azure;
+}
+
+.details {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container-img {
+    height: 100px;
+    width: 100px;
+    /* background-image: url(/img/signupimg.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+}
+
+.txt-next {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.status-order {
+    position: relative;
+    display: inline-flex;
+    padding: 0px 8px;
+    height: 26px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: rgb(214, 255, 222);
+    color: rgb(3, 172, 14);
+    align-items: center;
+    border-radius: 3px;
+    justify-content: center;
+}

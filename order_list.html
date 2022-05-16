@@ -1,20 +1,22 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-     
-     <link rel="stylesheet" href="css/header.css">
- 
-     <!-- JQuery -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/header.css">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="order_list.js"></script>
     <title>Order List</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <div class="p-2 shadow-sm sticky-top bg-light">
@@ -25,21 +27,77 @@
                     <img src="img/ic_home.svg" width="30px" height="30px" alt="">
                 </a>
                 <img class="btn-logout" style="cursor: pointer; margin-left: 10px;" src="img/ic_logout.svg" width="25px" height="25px" alt="">
-                <a href="index.html" style="text-decoration: none; color: black;"><p class="header-menu m-0">Home</p></a>
-                <a class="btn-logout" style="text-decoration: none; color: black; margin-left: 15px; cursor:pointer;"><p class="header-menu m-0">Logout</p></a>
+                <a href="index.html" style="text-decoration: none; color: black;">
+                    <p class="header-menu m-0">Home</p>
+                </a>
+                <a class="btn-logout" style="text-decoration: none; color: black; margin-left: 15px; cursor:pointer;">
+                    <p class="header-menu m-0">Logout</p>
+                </a>
             </div>
         </div>
     </div>
     <!-- HEADER -->
+    <header class="header-order">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold">Order List</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <div class="container pt-3">
+        <div id="list-order"></div>
+        <!-- <div class="card">
+            <div class="card-body">
+                <div class="card p-md-4 shadow-lg mt-2">
+                    <h6>Shopping 2022-05-13 <span class="status-order">Waiting Confirmation</span></h6>
+                    <h6>Foopes Web Order List</h6>
+                    <div class="details pt-1">
+                        <div class="container-img"></div>
+                        <div class="txt-next">
+                            <h6>Recipe Name</h6>
+                            <h6 style="font-weight: lighter">Delivery Fee: Rp.12.000</h6>
+                            <h6 class="pt-4" style="font-weight: 500">Total Price: Rp.100.000</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-md-4 shadow-lg mt-2">
+                    <h6>Shopping 2022-05-13 <span class="status-order">Waiting Confirmation</span></h6>
+                    <h6>Foopes Web Order List</h6>
+                    <div class="details pt-1">
+                        <div class="container-img"></div>
+                        <div class="txt-next">
+                            <h6>Recipe Name</h6>
+                            <h6 style="font-weight: lighter">Delivery Fee: Rp.12.000</h6>
+                            <h6 class="pt-4" style="font-weight: 500">Total Price: Rp.100.000</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-md-4 shadow-lg mt-2">
+                    <h6>Shopping 2022-05-13 <span class="status-order">Waiting Confirmation</span></h6>
+                    <h6>Foopes Web Order List</h6>
+                    <div class="details pt-1">
+                        <div class="container-img"></div>
+                        <div class="txt-next">
+                            <h6>Recipe Name</h6>
+                            <h6 style="font-weight: lighter">Delivery Fee: Rp.12.000</h6>
+                            <h6 class="pt-4" style="font-weight: 500">Total Price: Rp.100.000</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
 
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    <div id="list-order">CONTENT HERE</div>
-    
+    <!-- <div id="list-order"></div>
+    <div id="list-order"></div>
+    <div id="list-order"></div>
+    <div id="list-order"></div>
+    <div id="list-order"></div>
+    <div id="list-order"></div> -->
+
     <!-- FOOTER -->
     <div style="margin-top: 50vh;">
         &nbsp;
@@ -68,7 +126,7 @@
                     Supported by
                 </div>
                 <div class="d-flex py-3">
-                    <a href="https://mellntus.github.io/mekdunal/"><img width="130" src="https://www.upload.ee/image/14142746/Logo_MekDunal.png"/></a>
+                    <a href="https://mellntus.github.io/mekdunal/"><img width="130" src="https://www.upload.ee/image/14142746/Logo_MekDunal.png" /></a>
                 </div>
             </div>
             <div class="col">
@@ -76,10 +134,10 @@
                     Partner
                 </div>
                 <div>
-                    <a href="https://gofood.co.id"><img width="130" src="https://1000logos.net/wp-content/uploads/2020/10/Gofood-logo.png"/></a>
+                    <a href="https://gofood.co.id"><img width="130" src="https://1000logos.net/wp-content/uploads/2020/10/Gofood-logo.png" /></a>
                 </div>
                 <div>
-                    <a href="https://www.foodpanda.com/"><img width="130" src="https://s1.travix.com/cheaptickets/TH/assets/campaignLogos/Logo_foodpanda_horizonzal_pink_rgb_S.png"/></a>
+                    <a href="https://www.foodpanda.com/"><img width="130" src="https://s1.travix.com/cheaptickets/TH/assets/campaignLogos/Logo_foodpanda_horizonzal_pink_rgb_S.png" /></a>
                 </div>
             </div>
         </div>
@@ -89,4 +147,5 @@
     </div>
     <!-- FOOTER -->
 </body>
+
 </html>
