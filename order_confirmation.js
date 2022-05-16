@@ -26,17 +26,18 @@ $(document).ready(function(){
 
 function validate(){
     let isValid = true;
-    console.log("HERE "+$('#et-phone').val())
+    
     let name = $('#et-name').val();
     let address = $('#et-address').val();
     let phone = $('#et-phone').val();
-    if(name === null){
+    if(name.length === 0){
         isValid = false;
     }
-    if(phone === null){
+    if(phone.length === 0){
         isValid = false;
+        console.log("HERE "+phone.length)
     }
-    if(address === null){
+    if(address.length === 0){
         isValid = false;
     }
     if(!isDataLoaded){
