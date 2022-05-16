@@ -13,10 +13,11 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="order_detail.js"></script>
-    
+
     <title>Order Detail</title>
 
 </head>
+
 <body>
     <!-- HEADER -->
     <div class="p-2 shadow-sm sticky-top bg-light">
@@ -27,8 +28,12 @@
                     <img src="img/ic_truck.svg" width="30px" height="30px" alt="">
                 </a>
                 <img class="btn-logout" style="cursor: pointer; margin-left: 10px;" src="img/ic_logout.svg" width="25px" height="25px" alt="">
-                <a href="order_list.html" style="text-decoration: none; color: black;"><p class="header-menu m-0">Order List</p></a>
-                <a class="btn-logout" style="text-decoration: none; color: black; margin-left: 15px; cursor:pointer;"><p class="header-menu m-0">Logout</p></a>
+                <a href="order_list.html" style="text-decoration: none; color: black;">
+                    <p class="header-menu m-0">Order List</p>
+                </a>
+                <a class="btn-logout" style="text-decoration: none; color: black; margin-left: 15px; cursor:pointer;">
+                    <p class="header-menu m-0">Logout</p>
+                </a>
             </div>
         </div>
     </div>
@@ -36,52 +41,52 @@
 
     <section class="Form my-4 mx-4">
         <div class="container">
-                <div>
-                    <div class="w-100 bg-light p-4 text-center font-weight-bold text-xl-center rounded-3" style="font-size: 25px;">Order Detail</div>
+            <div>
+                <div class="w-100 bg-light p-4 text-center font-weight-bold text-xl-center rounded-3" style="font-size: 25px;">Order Detail</div>
+                <div>&nbsp;</div>
+                <div class="w-100 bg-light p-4 rounded-3">
+                    <div style="font-size: 12px;">Order Status</div>
+                    <div class="p-2 bg-warning d-flex justify-content-center align-items-center">
+                        <div id="tv-status" style="font-size: 20px;">-</div>
+                    </div>
                     <div>&nbsp;</div>
-                    <div class="w-100 bg-light p-4 rounded-3">
-                        <div style="font-size: 12px;">Order Status</div>
-                        <div class="p-2 bg-warning d-flex justify-content-center align-items-center">
-                            <div id="tv-status" style="font-size: 20px;">-</div>
-                        </div>
-                        <div>&nbsp;</div>
-                        <div class="text-sm-left mt-2" style="font-size: small;">Address</div>
-                        <p id="et-address" class="my-1 fs-5">...</p>
-                        <div class="text-sm-left mt-2" style="font-size: small;">Phone</div>
-                        <p id="et-phone" class="my-1 fs-5">...</p>
+                    <div class="text-sm-left mt-2" style="font-size: small;">Address</div>
+                    <p id="et-address" class="my-1 fs-5">...</p>
+                    <div class="text-sm-left mt-2" style="font-size: small;">Phone</div>
+                    <p id="et-phone" class="my-1 fs-5">...</p>
+                </div>
+
+                <p class="mt-4" style="font-size: 20px;">Recipe</p>
+
+                <a id="recipe-href" href="index.html" style="text-decoration: none; color: black;">
+                    <div class="w-100 bg-light p-4 rounded-3 d-flex align-items-center">
+                        <img id="iv-recipe" style="width: 105px;" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640" />
+                        <h2 id="tv-recipe-name" class="mx-3">...</h2>
                     </div>
+                </a>
 
-                    <p class="mt-4" style="font-size: 20px;">Recipe</p>
+                <div id="list-ingredients" class="row row-cols-md-2 justify-content-between mt-2">
 
-                    <a id="recipe-href" href="index.html" style="text-decoration: none; color: black;">
-                        <div class="w-100 bg-light p-4 rounded-3 d-flex align-items-center">
-                            <img id="iv-recipe" style="width: 105px;" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640"/>
-                            <h2 id="tv-recipe-name" class="mx-3">...</h2>
-                        </div>
-                    </a>
 
-                    <div id="list-ingredients" class="row row-cols-md-2 justify-content-between mt-2">
-                    
-
-                       
-                    </div>
-                    
-                    <div class="w-100 bg-light p-4 mt-4 rounded-3">
-                        <div class="row justify-content-between">
-                            <p class="col">Subtotal</p>                          
-                            <p id="tv-subtotal" class="col text-end">Rp.0</p>                          
-                        </div>
-                        <div class="row justify-content-between">
-                            <p class="col">Delivery Fee</p>                          
-                            <p id="tv-delivery-fee"  class="col text-end">Rp.0</p>                          
-                        </div>
-                        <div class="row justify-content-between">
-                            <p class="col">Total</p>                          
-                            <p id="tv-total" class="col text-end">Rp.0</p>                          
-                        </div>
-                    </div>
 
                 </div>
+
+                <div class="w-100 bg-light p-4 mt-4 rounded-3">
+                    <div class="row justify-content-between">
+                        <p class="col">Subtotal</p>
+                        <p id="tv-subtotal" class="col text-end">Rp.0</p>
+                    </div>
+                    <div class="row justify-content-between">
+                        <p class="col">Delivery Fee</p>
+                        <p id="tv-delivery-fee" class="col text-end">Rp.0</p>
+                    </div>
+                    <div class="row justify-content-between">
+                        <p class="col">Total</p>
+                        <p id="tv-total" class="col text-end">Rp.0</p>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </section>
@@ -115,7 +120,7 @@
                     Supported by
                 </div>
                 <div class="d-flex py-3">
-                    <a href="https://mellntus.github.io/mekdunal/"><img width="130" src="https://www.upload.ee/image/14142746/Logo_MekDunal.png"/></a>
+                    <a href="https://mellntus.github.io/mekdunal/"><img width="130" src="https://www.upload.ee/image/14142746/Logo_MekDunal.png" /></a>
                 </div>
             </div>
             <div class="col">
@@ -123,10 +128,10 @@
                     Partner
                 </div>
                 <div>
-                    <a href="https://gofood.co.id"><img width="130" src="https://1000logos.net/wp-content/uploads/2020/10/Gofood-logo.png"/></a>
+                    <a href="https://gofood.co.id"><img width="130" src="https://1000logos.net/wp-content/uploads/2020/10/Gofood-logo.png" /></a>
                 </div>
                 <div>
-                    <a href="https://www.foodpanda.com/"><img width="130" src="https://s1.travix.com/cheaptickets/TH/assets/campaignLogos/Logo_foodpanda_horizonzal_pink_rgb_S.png"/></a>
+                    <a href="https://www.foodpanda.com/"><img width="130" src="https://s1.travix.com/cheaptickets/TH/assets/campaignLogos/Logo_foodpanda_horizonzal_pink_rgb_S.png" /></a>
                 </div>
             </div>
         </div>
@@ -149,7 +154,7 @@
 
 
 
-    
+
 
 </body>
 
