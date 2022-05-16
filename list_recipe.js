@@ -21,10 +21,12 @@ async function proccessData(json) {
                 <div class="mx-2">${listRecipe[index].recipe_order_count} ordered</div>
             </div>
             <div class="text-end">
-                <button class="btn btn-outlined-primary rounded-3 mt-3 align-items-center">
-                    
-                    <img width="35px" src="img/ic_arrow-right.svg"/>
-                </button>
+                <a href="recipe_detail.html?id=${listRecipe[index].id}">
+                    <button class="btn btn-outlined-primary rounded-3 mt-3 align-items-center">
+                        
+                        <img width="35px" src="img/ic_arrow-right.svg"/>
+                    </button>
+                </a>
             </div>
         </div>
     `;
