@@ -21,7 +21,7 @@ async function getRecipe() {
             let listOrder = result.data;
             let listItemHtml = [];
             listOrder.forEach(e => {
-                let element = `<div class="card">
+                let element = `<div class="card mt-4">
                 <div class="card-body">
                     <div class="card p-md-4 shadow-lg mt-2">
                         <h6>Shopping ${e.order_date} <span class="status-order">${e.status}</span></h6>
