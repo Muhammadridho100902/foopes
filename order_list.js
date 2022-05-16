@@ -36,6 +36,14 @@ async function getRecipe() {
                                 <h6 class="pt-4" style="font-weight: 500">Total Price: Rp. ${e.total_price}</h6>
                             </div>
                         </div>
+                        <div class="text-right">
+                        <a href="order_detail.html?id=${e.id}">
+                            <button class="btn btn-outlined-primary rounded-3 mt-3 align-items-center">
+                                
+                                <img width="35px" src="img/ic_arrow-right.svg"/>
+                            </button>
+                        </a>
+                    </div>
                     </div>
                 </div>
             </div>`;
