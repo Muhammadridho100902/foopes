@@ -3,7 +3,16 @@ $(document).ready(function(){
     const urlParams = new URLSearchParams(queryString);
     let id = urlParams.get('id');
     getRecipe(id);
+
+    $(".btn-logout").click(function(){
+        logout();
+    });
 });
+
+function logout(){
+    localStorage.setItem('token', "");
+    window.location.replace("login.html");
+}
 
 async function getRecipe(id){
     let token = localStorage.getItem('token');
