@@ -1,8 +1,16 @@
 $(document).ready(function() {
     getListRecipe();
 
+    $(".btn-logout").click(function(){
+        logout();
+    });
 
 })
+
+function logout(){
+    localStorage.setItem('token', "");
+    window.location.replace("login.html");
+}
 
 async function proccessData(json) {
     let listRecipe = json.data;
@@ -51,7 +59,7 @@ async function getListRecipe() {
             console.log(result)
         },
         error: function(error) {
-
+            window.location.assign("login.html");
         }
     });
 }

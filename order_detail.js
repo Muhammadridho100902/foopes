@@ -24,8 +24,15 @@ $(document).ready(function(){
         
     });
 
+    $(".btn-logout")
+
     getOrder(id);
 });
+
+function logout(){
+    localStorage.setItem('token', "");
+    window.location.replace("login.html");
+}
 
 function validate(){
     let isValid = true;
