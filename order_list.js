@@ -53,7 +53,7 @@ async function getRecipe() {
             $('#list-order').append(listItemHtml);
         },
         error: function(error) {
-            window.location.replace("Login.html");
+            window.location.replace("login.html");
         }
     });
 }

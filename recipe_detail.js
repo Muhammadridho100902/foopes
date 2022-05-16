@@ -31,6 +31,7 @@ async function getRecipe(id){
             parseData(result);
         },
         error: function (error) {
+            window.location.replace("login.html");
             console.log(error);
             $('#tv-error-message').toggleClass('visually-hidden', false);
             $('#loading_bar').toggleClass('visually-hidden', true);
