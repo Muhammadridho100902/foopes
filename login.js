@@ -1,15 +1,15 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     // Check wether the user is already logged in or not
-    
-   // checkSession();
 
-    $("#btn_login").click(function () {
+    // checkSession();
+
+    $("#btn_login").click(function() {
         loginJquery();
     });
 });
 
-async function checkSession(){
+async function checkSession() {
     let token = localStorage.getItem('token');
     console.log('S1');
     $.ajax({
@@ -21,19 +21,19 @@ async function checkSession(){
             'Accept': 'appplication/json'
         },
         contentType: 'application/json; charset=utf-8',
-        success: function (result) {
+        success: function(result) {
             console.log(result);
-            if(result.status === true){
-                window.location.replace("order_list.html");
+            if (result.status === true) {
+                window.location.replace("index.html");
             }
         },
-        error: function (error) {
+        error: function(error) {
             console.log(error);
         }
     });
 }
 
-async function loginJquery(){
+async function loginJquery() {
     let etEmail = $("#et_email");
     let etPass = $("#et_pass");
 
@@ -50,27 +50,26 @@ async function loginJquery(){
         data: bodyData
     });
 
-    request.done(function (response, textStatus, jqXHR){
+    request.done(function(response, textStatus, jqXHR) {
         // Log a message to the console
         console.log(response);
         localStorage.setItem('token', response.data.token)
-        window.location.replace("order_list.html");
+        window.location.replace("index.html");
     });
 
     // Callback handler that will be called on failure
-    request.fail(function (jqXHR, textStatus, errorThrown){
+    request.fail(function(jqXHR, textStatus, errorThrown) {
         // Log the error to the console
         console.error(
-            "The following error occurred: "+
+            "The following error occurred: " +
             textStatus, errorThrown
         );
     });
 
     // Callback handler that will be called regardless
     // if the request failed or succeeded
-    request.always(function () {
+    request.always(function() {
         // Reenable the inputs
-       
+
     });
 }
-
