@@ -14,13 +14,6 @@ body {
     box-shadow: 12px 12px 22px grey;
 }
 
-.imglogin {
-    max-width: 95%;
-    height: auto;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
 .btn1 {
     border: none;
     outline: none;
